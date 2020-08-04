@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <title>GameGuidez</title>
 </head>
-<body class="grey lighten-3"">
+<body class="grey lighten-3">
 
   <!-- NAVBAR -->
   <nav class="z-depth-0 grey lighten-4">
@@ -119,6 +119,36 @@
       </li>
     </ul>
   </div>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+
+ <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+ <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+ <!-- Add Firebase products that you want to use -->
+ <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+ <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCvhJ50qYNrwWsfdsKlrTvOCOt98lRuMGY",
+    authDomain: "game-guidez-431b4.firebaseapp.com",
+    databaseURL: "https://game-guidez-431b4.firebaseio.com",
+    projectId: "game-guidez-431b4",
+    storageBucket: "game-guidez-431b4.appspot.com",
+    messagingSenderId: "741425077444",
+    appId: "1:741425077444:web:2d9f504ed17ca8224e7d91",
+    measurementId: "G-Z3GPZWT2G8"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
