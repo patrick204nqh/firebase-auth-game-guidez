@@ -6,10 +6,12 @@ const accountDetails = document.querySelector('.account-details');
 const setupUI = (user) => {
   if (user) {
     // account info
-    const html = `
-      <div>Logged in as ${user.email}</div>
-    `;
-    accountDetails.innerHTML = html;
+    db.collection('users').doc(user.uid).get().then(doc => {
+      const html = `
+        <div>Logged in as ${user.email}</div>
+      `;
+      accountDetails.innerHTML = html;
+    })
     // toggle UI elements
     loggedInLinks.forEach(item => item.style.display = 'block');
     loggedOutLinks.forEach(item => item.style.display = 'none');
