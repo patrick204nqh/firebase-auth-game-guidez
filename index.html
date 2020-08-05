@@ -57,6 +57,15 @@
       </div>
     </nav>
 
+    <!-- ADMIN ACTIONS -->
+    <form
+      class="center-align admin-actions"
+      style="margin: 40px auto; max-width: 300px;"
+    >
+      <input type="email" placeholder="User email" id="admin-email" required />
+      <button class="btn-small yellow darken-2 z-depth-0">Make admin</button>
+    </form>
+
     <!-- SIGN UP MODAL -->
     <div id="modal-signup" class="modal">
       <div class="modal-content">
@@ -146,6 +155,7 @@
     <!-- Add Firebase products that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-functions.js"></script>
     <script>
       // Your web app's Firebase configuration
       var firebaseConfig = {
@@ -165,6 +175,7 @@
       // make auth and firestore references
       const auth = firebase.auth();
       const db = firebase.firestore();
+      const functions = firebase.functions();
 
       // update firestore settings
       // db.settings({ timestampsInSnapshots: true });
