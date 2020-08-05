@@ -1,3 +1,8 @@
+// get data
+db.collection('guides').get().then((snapshot) => {
+  setupGuides(snapshot.docs);
+})
+
 // listen for auth status changes
 auth.onAuthStateChanged(user => {
   if (user) {
@@ -18,7 +23,6 @@ signupForm.addEventListener('submit', (e) => {
 
   // sign up the user
   auth.createUserWithEmailAndPassword(email, password).then(cred => {
-    console.log(cred.user);
     const modal = document.querySelector('#modal-signup');
     M.Modal.getInstance(modal).close();
     signupForm.reset();
